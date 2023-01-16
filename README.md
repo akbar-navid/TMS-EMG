@@ -2,9 +2,8 @@
 
 ## Project Summary
 Please take a look at our papers below, for the corresponding coding folders:
-1. ```inv_TNSRE``` [Inverse (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
-2. ```fwd_PETRA``` [Forward (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
-3. ```fwd_NER``` [Forward (TMS->EMG, Preliminary: 2020)](https://ieeexplore.ieee.org/abstract/document/8717159)
+1. ```inverse``` [Inverse Model (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
+2. ```forward``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
 
 <!-- ## Prerequisites
 Please install all necessary library versions by typing in terminal:
@@ -14,7 +13,7 @@ Please install all necessary library versions by typing in terminal:
 ## File Structure
 ```
 |--<data>
-|--coding file (e.g. inv_TNSRE\inverse.ipynb)
+|--coding file (e.g. inverse\inverse.py)
 ```
 
 <!-- ## Usage
