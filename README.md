@@ -1,6 +1,10 @@
 # TMS-EMG Forward and Inverse Regression Modeling
 
 ## Project Summary
+![TMS-contribution](other/TMS-contribution.png)
+
+<img src=other/causal-inverse.png width="400">
+
 Please take a look at our papers below, for the corresponding coding folders:
 1. ```inverse``` [Inverse Model (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
 2. ```forward``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
@@ -25,4 +29,8 @@ Plots for results can be generated using ```plot_csv.py```
 
 Some residual code snippets and inline results+visualization can be found in ```multimodal_RA.ipynb```
 
-The raw source files can be found in _/SDrive/CSL/\_Archive/2019/DT\_LONI\_Epileptogenesis\_2019_ -->
+The raw source files can be found in _/SDrive/CSL/\_Archive/2019/DT\_LONI\_Epileptogenesis\_2019_
+
+![causal-inverse](other/causal-inverse.png)
+
+-->
