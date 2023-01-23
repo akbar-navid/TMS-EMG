@@ -1,2 +1,5 @@
-tensorflow==2.2.0
+tensorflow==2.3.0
 protobuf==3.20.*
+matplotlib==3.5.3
+scikit_learn==1.0.2
+numpy==1.18.5

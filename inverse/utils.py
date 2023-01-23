@@ -1,47 +1,38 @@
 # %%
-import numpy as np
-from scipy import stats
-import matplotlib as mpl
-print(mpl.__version__)
+imports=True
+if imports==True:
+    import os
+    import numpy as np
+    from scipy import stats
+    import matplotlib as mpl
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 
-import tensorflow as tf
-from tensorflow.keras import losses
-from tensorflow.keras.layers import Lambda, Dense, Conv3D, MaxPooling3D, BatchNormalization, Dropout, Flatten, Reshape, Conv3DTranspose, UpSampling3D
-from tensorflow.keras.models import Model
-#from keras.utils import to_categorical
-from tensorflow.keras.regularizers import l1_l2
-import tensorflow.keras.backend as K
-K.set_image_data_format('channels_last')
-from tensorflow.keras.activations import relu
+    import tensorflow as tf
+    from tensorflow.keras import losses
+    from tensorflow.keras.layers import Lambda, Dense, Conv3D, MaxPooling3D, BatchNormalization, Dropout, Flatten, Reshape, Conv3DTranspose, UpSampling3D
+    from tensorflow.keras.models import Model
+    #from keras.utils import to_categorical
+    from tensorflow.keras.regularizers import l1_l2
+    import tensorflow.keras.backend as K
+    K.set_image_data_format('channels_last')
+    from tensorflow.keras.activations import relu
 
-seed_value= 0
-# 1. Set `PYTHONHASHSEED` environment variable at a fixed value
-import os
-os.environ['PYTHONHASHSEED']=str(seed_value)
+    # Set seeds
+    seed_value= 0
+    # 1. Set `PYTHONHASHSEED` environment variable at a fixed value
+    import os
+    os.environ['PYTHONHASHSEED']=str(seed_value)
 
-# 2. Set `python` built-in pseudo-random generator at a fixed value
-import random
-random.seed(seed_value)
+    # 2. Set `python` built-in pseudo-random generator at a fixed value
+    import random
+    random.seed(seed_value)
 
-# 3. Set `numpy` pseudo-random generator at a fixed value
-np.random.seed(seed_value)
+    # 3. Set `numpy` pseudo-random generator at a fixed value
+    np.random.seed(seed_value)
 
-# 4. Set `tensorflow` pseudo-random generator at a fixed value
-tf.compat.v1.set_random_seed(seed_value)
+    # 4. Set `tensorflow` pseudo-random generator at a fixed value
+    tf.compat.v1.set_random_seed(seed_value)
 
-tf.keras.backend.clear_session()
-# gpus = tf.config.experimental.list_physical_devices('GPU')
-# tf.config.experimental.set_memory_growth(gpus[0], True)
-
-tf.compat.v1.disable_eager_execution()
-init_op = tf.compat.v1.global_variables_initializer()
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.allow_growth = True
-config.allow_soft_placement = True
-config.gpu_options.per_process_gpu_memory_fraction = 0.4
-sess = tf.compat.v1.Session(config=config)
-run_opts = tf.compat.v1.RunOptions(report_tensor_allocations_upon_oom = True)
-sess.run(init_op)
 
 # %%   
 def relu_out(x):
@@ -238,8 +229,7 @@ def Inv_Map(inputs, act_f='relu', dr=False, dr_rate=0, bn=False,l_1=0, l_2=0, ac
     return Model(inputs=inputs, outputs=y)
 
 
-def Inv_Map_VAE_Lat_2d(inputs, l_1=0, l_2=0, act='relu', act_2='linear', act_3='relu', bias=True, vae_std=False, vae_dec=False,
-                       act_f='relu', filters=(16,32,64), init='glorot_uniform', mu=0, std=1, a_1=0, a_2=0):
+def Inv_Map_VAE_Lat_2d(inputs, motor_mask, l_1=0, l_2=0, act='relu', act_2='linear', act_3='relu', bias=True, vae_std=False, vae_dec=False,act_f='relu', filters=(16,32,64), init='glorot_uniform', mu=0, std=1, a_1=0,a_2=0):
     
     enc_z = Dense(units=16, kernel_regularizer=l1_l2(l1=l_1, l2=l_2), use_bias=bias, name='fc_1')(inputs)
     enc_z = Dense(units=32, kernel_regularizer=l1_l2(l1=l_1, l2=l_2), use_bias=bias, name='fc_2')(enc_z)
