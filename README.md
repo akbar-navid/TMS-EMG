@@ -17,11 +17,20 @@ Please install all necessary library versions by typing in terminal:
 ## File Structure
 ```
 |--<data>
-|--coding file (e.g. inverse\inverse.py)
+|--coding file (e.g. M2M-InvNet\train.py)
 ```
 
+## Usage
+
+An execution sample for the ```Direct Variational``` model from ```M2M-InvNet```:
+
+```python train.py --dir <str, data directory> --sub <int, subject number>```
+
+The models from ```M2M-Net``` are in a Jupyter cell format. Please consider running the cells sequentially in VSCode or Spyder.
+
+
 <!-- ## Usage
-Clone this repo, and copy the _\_data_ folder from [here](https://www.dropbox.com/sh/icfard16qqjpqrm/AAA3oMcZpGe1C0HZfqpflVIOa?dl=0) to the root directory [as shown in the file tree above], for all codes to work.
+Clone this repo, and copy the _\_data_ folder from [here](https:) to the root directory [as shown in the file tree above], for all codes to work.
 
 The code runs from terminal using ```main.py```, with supporting functions automatically parsed from ```models.py```, ```helper.py```, and open-sourced functions from the folder ```extra```.
 
@@ -37,7 +46,7 @@ The raw source files can be found in _/SDrive/CSL/\_Archive/2019/DT\_LONI\_Epile
 
 ## Publications
 Please take a look at our papers below, for the corresponding coding folders:
-1. ```inverse``` [Inverse Model (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
+1. ```M2M-InvNet``` [Inverse Model (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
 
 Cite: 
 ```
@@ -49,7 +58,7 @@ Cite:
 }
 ```
 
-2. ```forward``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
+2. ```M2M-Net``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
 
 Cite: 
 ```
