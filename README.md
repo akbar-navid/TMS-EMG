@@ -34,7 +34,7 @@ python test.py --dir <str, data directory> --sub <int, subject number>
 
 The models from ```M2M-Net``` are in a Jupyter cell format. Please consider running the cells sequentially in VSCode or Spyder.
 
-Matlab scripts used to the process and visualize both the forward and inverse models can be found in ```other```.
+Matlab scripts used to preprocess and visualize both the forward and inverse models can be found in ```other```.
 
 <!-- ## Usage
 Clone this repo, and copy the _\_data_ folder from [here](https:) to the root directory [as shown in the file tree above], for all codes to work.
