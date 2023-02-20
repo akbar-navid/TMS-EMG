@@ -21,13 +21,20 @@ Please install all necessary library versions by typing in terminal:
 ```
 
 ## Usage
+An execution sample for training the ```Direct Variational``` model from ```M2M-InvNet```:
+```
+python train.py --dir <str, data directory> --sub <int, subject number>
+```
+An execution sample for testing the ```Direct Variational``` model from ```M2M-InvNet```:
 
-An execution sample for the ```Direct Variational``` model from ```M2M-InvNet```:
-
-```python train.py --dir <str, data directory> --sub <int, subject number>```
+```
+python test.py --dir <str, data directory> --sub <int, subject number>
+```
+```test.py``` will generate fold-level statistics (NRMSE, R^2) for the selected subject. Use ```eval.py``` (currently in a Jupyter cell format) for more advanced inference features. Supporting functions are automatically parsed from ```utils.py```. All other models implemented in our paper can be found in ```allModels.py```.
 
 The models from ```M2M-Net``` are in a Jupyter cell format. Please consider running the cells sequentially in VSCode or Spyder.
 
+Matlab scripts used to the process and visualize both the forward and inverse models can be found in ```other```.
 
 <!-- ## Usage
 Clone this repo, and copy the _\_data_ folder from [here](https:) to the root directory [as shown in the file tree above], for all codes to work.
