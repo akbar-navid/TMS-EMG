@@ -9,17 +9,11 @@ tf.config.list_physical_devices('GPU')
 from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
 #from keras.utils import to_categorical
-from tensorflow.keras.optimizers import Adadelta
-from tensorflow.keras.callbacks import EarlyStopping
 
-from tensorflow.python.keras.callbacks import ModelCheckpoint,EarlyStopping,ReduceLROnPlateau
 import tensorflow.keras.backend as K
 K.set_image_data_format('channels_last')
-# import sklearn as sk
 
 tf.keras.backend.clear_session()
-# gpus = tf.config.experimental.list_physical_devices('GPU')
-# tf.config.experimental.set_memory_growth(gpus[0], True)
 tf.compat.v1.disable_eager_execution()
 init_op = tf.compat.v1.global_variables_initializer()
 config = tf.compat.v1.ConfigProto()
@@ -183,17 +177,13 @@ if args.sub==3:
     # Load E-field Stims (Sub-MD, All RMTs)
     m = 0
     thresh = 4e-4
-    # j = [300,]
-    # k = [range(1208)]
     list3 = []
-    # list3 = [16,26,32,46]
     calc = 113
     q = 1320
     list_int = [300,601,602,603,604,605,606,907,1021]
     list2 = []
     for i in list_int:
         list2.append(i+113)
-    # print(list2)
 
     while calc <= q:
         if calc in list2:

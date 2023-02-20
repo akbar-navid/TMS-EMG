@@ -32,6 +32,7 @@ if imports==True:
 
     # 4. Set `tensorflow` pseudo-random generator at a fixed value
     tf.compat.v1.set_random_seed(seed_value)
+    data_type= np.float32
 
 
 # %%   

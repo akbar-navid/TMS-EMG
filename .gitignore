@@ -2,6 +2,7 @@
 .DS_store
 weights/
 temp/
+dump.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
