@@ -1,6 +1,7 @@
 # Custom list
 .DS_store
 weights/
+temp/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
