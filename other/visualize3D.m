@@ -1,5 +1,6 @@
  close all; clc; 
  clearvars;
+ % view([307.3 5.6]); [latest]
 
 % for i=2:12:47
 for i=1:6
