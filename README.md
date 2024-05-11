@@ -1,13 +1,18 @@
-# TMS-EMG Forward and Inverse Regression Modeling
+# Motor Cortex Mapping (Forward and Inverse) using TMS-EMG and ConvNets
 
 ## Project Summary
 Overall System: 
 
-![TMS-contribution](other/TMS-contribution.png)
+<img src=other/TMS-contribution.png  width="800">
 
 Modeling Pipelines: 
 
-<img src=other/causal-inverse.png width="400">
+<img src=other/causal-inverse.png width="500">
+
+Inverse Imaging System Network Architecture: 
+
+<img src=https://github.com/neu-spiral/TMS-EMG/assets/38365057/4fb75958-e39a-4a4f-ae28-07917f6fd9a5  width="800">
+
 
 <!-- ## Prerequisites
 Please install all necessary library versions by typing in terminal:
@@ -52,20 +57,22 @@ The raw source files can be found in _/SDrive/CSL/\_Archive/2019/DT\_LONI\_Epile
 -->
 
 ## Publications
-Please take a look at our papers below, for the corresponding coding folders:
-1. ```M2M-InvNet``` [Inverse Model (EMG->TMS: 2022)](https://www.biorxiv.org/content/10.1101/2022.07.22.501062v2.abstract)
+Please take a look at our papers below (and cite if you find helpful), for the corresponding coding folders:
+
+[1] ```M2M-InvNet``` [Inverse Model (EMG->TMS: 2024)](https://ieeexplore.ieee.org/abstract/document/10473158/)
 
 Cite: 
 ```
-@article{akbar2022m2minv,
-  title={M2M-InvNet: TMS Induced Electric Field Reconstruction from Muscle Responses Using a Convolutional Network and Variational Inference},
-  author={Akbar, Md Navid and Yarossi, Mathew and Rampersad, Sumientra and Masoomi, Aria and Tunik, Eugene and Brooks, Dana and Erdogmus, Deniz},
-  journal={bioRxiv},
-  year={2022}
+@article{akbar2024m2m,
+  title={M2M-InvNet: Human Motor Cortex Mapping from Multi-Muscle Response Using TMS and Generative 3D Convolutional Network},
+  author={Akbar, Md Navid and Yarossi, Mathew and Rampersad, Sumientra and Lockwood, Kyle and Masoomi, Aria and Tunik, Eugene and Brooks, Dana and Erdo{\u{g}}mu{\c{s}}, Deniz},
+  journal={IEEE Transactions on Neural Systems and Rehabilitation Engineering},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
-2. ```M2M-Net``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
+[2] ```M2M-Net``` [Forward Model (TMS->EMG: 2020)](https://dl.acm.org/doi/10.1145/3389189.3389203)
 
 Cite: 
 ```
